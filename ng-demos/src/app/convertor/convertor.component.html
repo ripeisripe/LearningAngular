@@ -1,4 +1,5 @@
 <div>
+  Convertor rocks! {{test()}}
   <form #myForm="ngForm" (submit)="calculate(distance,selectedIn,selectedOut)">
 
     <input type="number" name="distance" [(ngModel)]="distance">
@@ -14,6 +15,6 @@
 
     <button>OK</button>
     <br>
-    {{ converted }}
+    You converted {{distance}} {{selectedIn}} into {{ converted }} {{selectedOut}}
   </form>
 </div>

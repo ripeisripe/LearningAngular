@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ConvertorComponent implements OnInit {
   distance=0;
   selectedIn="m";
-  selectedOut="m";
+  selectedOut="miles";
   converted=undefined;
   units = globalUnits;
   constructor() { }
