@@ -1,0 +1,44 @@
+<div>
+  <input type="text" [(ngModel)]="backedField">
+
+  Value: {{backedField}}
+  <hr/>
+  <input type="checkbox" [(ngModel)]="checked" >
+
+  checked:{{checked}}
+
+  <hr/>
+
+  Is Nicolas there
+  <input type="checkbox" [checked]="isNicolas()">
+
+  Select:
+  <select [(ngModel)]="selectedOption">
+      <option *ngFor = "let o of options" [ngValue]="o">{{o}}</option>
+  </select>
+
+  You have selected: {{selectedOption}} => {{getTypeof()}}
+  <hr/>
+  Choose ingredient:
+  <select [(ngModel)]="selectedIngredient" (change)="onChange()">
+    <option *ngFor="let i of ingredients" [ngValue]="i">
+      {{i.name}}
+    </option>
+  </select>
+  You have selected: {{selectedIngredient?.name}} ({{selectedIngredient?.good}})
+  <hr/>
+</div>
+
+<div>
+  <h2>Validations</h2>
+  <form (Submit)="onSubmit()" #myForm="ngForm">
+    <input type="number" min="0" max="18" required
+            name="age" [(ngModel)]="formData.age">
+
+    <input type="email"
+           name="email" [(ngModel)]="formData.email">
+    <br/>
+    {{myForm.form.valid  | json}}
+    <button [disabled]="!isValid()">Ok</button>
+  </form>
+</div>

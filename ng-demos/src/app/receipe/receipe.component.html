@@ -1,0 +1,11 @@
+
+
+
+
+  <ul>
+   <li *ngFor="let i of ingredients" (click)="toggle(i)">
+     <del *ngIf="isDone(i)">{{i.name}}</del>
+     <span *ngIf="!isDone(i)">{{i.name}}</span>
+   </li>
+
+  </ul>
