@@ -1,3 +1,19 @@
-<p>
-  convertor rock! {{test()}}
-</p>
+<div>
+  <form #myForm="ngForm" (submit)="calculate(distance,selectedIn,selectedOut)">
+
+    <input type="number" name="distance" [(ngModel)]="distance">
+
+    <select name="unitIn" [(ngModel)]="selectedIn">
+      <option *ngFor="let u of units" [ngValue]="u">{{ u }}</option>
+
+    </select>
+    to
+    <select [(ngModel)]="selectedOut" name="unitOut">
+      <option *ngFor="let u of units" [ngValue]="u">{{ u }}</option>
+    </select><br>
+
+    <button>OK</button>
+    <br>
+    {{ converted }}
+  </form>
+</div>
