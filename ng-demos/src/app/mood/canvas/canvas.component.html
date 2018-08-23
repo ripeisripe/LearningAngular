@@ -1,0 +1,14 @@
+<script src="canvas.component.ts"></script>
+<div>
+<app-tab-list></app-tab-list>
+
+<!-- ici independant de service
+  <app-happy *ngIf="isHappy()"></app-happy>
+  <app-soso *ngIf="isSoso()"></app-soso>
+  <app-angry *ngIf="isAngry()"></app-angry>
+-->
+
+  <!-- We will factorize in one pure component -->
+  <app-mood-face [mood]="this.service.mood"></app-mood-face>
+
+</div>
