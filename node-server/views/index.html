@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>Welcome to {{ title }}</p>
+
+    <h1>API</h1>
+
+    <h2>Users</h2>
+
+    <ul>
+    <li>GET <a href="/api/users">/api/users</a> : liste par id</li>
+    <li>GET <a href="/api/users/all">/api/users/all</a> : liste par nom</li>
+    <li>GET <a href="/api/users/admins">/api/users/admins</a> : liste les admins</li>
+    <li>GET <a href="/api/users/filter?name=Emy">/api/users/filter?x=y</a> : filtre les users</li>
+    <li>PUT /api/users/:id {data} : update user</li>
+    <li>POST /api/users {data} : crée un nouveau user (email unique)</li>
+    </ul>
+
+    <h2>Topics</h2>
+    <ul>
+        <li>GET  <a href="/api/topics/">/api/topics</a> : liste par id</li>
+        <li>GET <a href="/api/topics/2">/api/topics/:id</a> : trouve id</li>
+        <li>GET <a href="/api/topics/filter?user=my">/api/topics/filter?x=y</a> : filtre user, title, content, comment par LIKE - seulement user pour l'instant</li>
+        <li>POST /api/topics {data} : crée un nouveau Topic</li>
+        <li>PUT /api/topics/:id/tags/ [tags] : tag le topic</li>
+
+    </ul>
+
+    <h2>Comments</h2>
+
+
+    <ul>
+        <li>GET  <a href="/api/comments/">/api/comments</a> : liste par id</li>
+        <li>GET <a href="/api/comments/2">/api/comments/:id</a> : trouve id</li>
+        <li>GET <a href="/api/comments/filter?content=foot">/api/comments/filter?x=y</a> : filtre content par LIKE</li>
+        <li>POST /api/topics {data} : crée un nouveau Topic</li>
+        <li>PUT /api/comments/:id/ {"content":"...", tags:[]} : edit le comment et les tags</li>
+
+    </ul>
+
+  </body>
+</html>
