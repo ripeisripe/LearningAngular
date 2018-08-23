@@ -24,7 +24,7 @@
   </tr>
 
   <tr *ngFor="let c of service.coins">
-    <td>{{c.name}}</td>
+    <td *ngIf="">{{c.name}}</td>
     <td>{{c.symbol}}</td>
     <td>{{c.value}}</td>
   </tr>
