@@ -1,0 +1,7 @@
+{
+  "name": "tim-mood",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,3 +1,20 @@
-<p>
-  user-list works!
-</p>
+
+<div>
+ User List
+</div>
+
+<table>
+  <tr>
+    <td>Nom</td>
+    <td>Email</td>
+    <td>Admin</td>
+  </tr>
+
+  <tr *ngFor="let user of service.users">
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.admin}}</td>
+  </tr>
+</table>
+
+<app-user *ngFor="let user of service.users" [name]="user.name" [admin]="user.admin"></app-user>

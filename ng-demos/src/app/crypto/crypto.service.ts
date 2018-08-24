@@ -18,8 +18,8 @@ export class CryptoService {
   } // client pour faire des requêtes
 
   fetchCryptoPrices() {
-    console.log("Hello debugger");
-    this.http.get<any[]>("https://api.coinmarketcap.com/v1/ticker/")
+    console.log('Hello debugger');
+    this.http.get<any[]>('https://api.coinmarketcap.com/v1/ticker/')
       .subscribe((r: any[]) => {
 
         this.coins = r.map(coin => ({
@@ -36,13 +36,13 @@ export class CryptoService {
 
 }
 
-  function mapAnyToCoin(coin:any):Coin {
+  function mapAnyToCoin(coin:any): Coin {
     return {
-      name:coin.name,
-      symbol:coin.symbol,
-      value:coin.prince_usd,
-      rank:coin.rank
-    }
+      name: coin.name,
+      symbol: coin.symbol,
+      value: coin.prince_usd,
+      rank: coin.rank
+    };
   }
 
 
