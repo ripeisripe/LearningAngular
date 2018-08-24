@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserListService} from '../user-list.service';
+import {User, UserListService} from '../user-list.service';
 
 @Component({
   selector: 'app-user-list',
@@ -8,6 +8,7 @@ import {UserListService} from '../user-list.service';
 })
 export class UserListComponent implements OnInit {
 
+  loggedUser:string = undefined;
   constructor(public service: UserListService) {
     this.service.fetchUserList();
   } // pour lier au service

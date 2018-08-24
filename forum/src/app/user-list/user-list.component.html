@@ -1,7 +1,6 @@
 
 <div>
  User List
-</div>
 
 <table>
   <tr>
@@ -17,4 +16,9 @@
   </tr>
 </table>
 
-<app-user *ngFor="let user of service.users" [name]="user.name" [admin]="user.admin"></app-user>
+<app-user *ngFor="let user of service.users" [name]="user.name" [admin]="user.admin" [email]="user.email" [user]="user" (click)="service.onClick(user)"></app-user>
+
+<p *ngIf="service.loggedUser != undefined">{{service.loggedUser}} is logged.</p>
+
+</div>
+
