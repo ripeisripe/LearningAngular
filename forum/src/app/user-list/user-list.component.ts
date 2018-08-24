@@ -13,8 +13,6 @@ export class UserListComponent implements OnInit {
     this.service.fetchUserList();
   } // pour lier au service
 
-
-
   ngOnInit() {
   }
 
